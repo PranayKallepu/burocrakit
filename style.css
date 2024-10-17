@@ -1,0 +1,231 @@
+
+
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+nav {
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    position: relative;
+    height: 70px;
+}
+
+.logo{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
+
+
+
+.buro__burguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.buro__burguer span {
+    display: block;
+    height: 3px;
+    background-color: #000;
+}
+
+.main-navigation__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    /* You can toggle this with JavaScript */
+}
+
+.main-navigation__overlay_wrapper {
+    padding: 2rem;
+    color: #fff;
+}
+
+.main-navigation__overlay ul li {
+    margin: 1rem 0;
+}
+
+.main-navigation__link {
+    position: relative;
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+
+.main-navigation__link:hover .not-hovered {
+    display: none;
+}
+
+.main-navigation__link:hover .hovered {
+    display: inline;
+}
+
+.hovered {
+    display: none;
+    color: #e73c37;
+}
+
+/* Address Section */
+address a {
+    color: #666;
+    font-style: normal;
+    transition: color 0.3s ease;
+}
+
+address a:hover {
+    color: #e73c37;
+}
+
+.branding-years-container {
+    margin: 1.5rem 0;
+    color: #000;
+    font-size: 1rem;
+}
+
+.branding-years__list li {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.filters-wrapper {
+    margin-top: 2rem;
+}
+
+.filters-wrapper span.selector {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.project-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-info span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.mouse-cursor-wrapper span {
+    display: inline-block;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #000;
+}
+
+.scroll-helper {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.scroll-helper__circle {
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .main-navigation__link {
+        font-size: 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
